@@ -1,0 +1,17 @@
+{
+	"name": "MC tic-tac-toe",
+	"namespace": "mc-tic-tac-toe",
+	"description": "A Managed Component for tic tac toe",
+	"icon": "assets/icon.svg",
+	"allowCustomFields": true,
+	"permissions": {
+		"client_network_requests": {
+			"description": "allow component to make network requests to get the game state",
+			"required": true
+		},
+		"provide_server_functionality": {
+			"description": "expose scripts and API endpoints for the game",
+			"required": true
+		}
+	}
+}

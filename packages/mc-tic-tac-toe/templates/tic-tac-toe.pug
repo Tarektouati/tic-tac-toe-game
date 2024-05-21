@@ -1,0 +1,31 @@
+head
+  style.
+    .board {
+      background-color: #3a3c3e;
+      display: inline-grid;
+      grid-template-rows: 100px 100px 100px;
+      grid-template-columns: 100px 100px 100px;
+      grid-gap: 3px;
+    }
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ecd7ba;
+      cursor: pointer;
+      line-height: 100px;
+      font-size: 60px;
+      display: flex;
+      justify-content: center;
+      background-color: #3a3c3e;
+      color: #FFF
+    }
+  script.
+    const API_MOVE_PATH = "#{apiMovePath}"
+    const API_RESET_PATH = "#{apiResetPath}"
+  script(src=`${scriptFilePath}`)
+body
+  h2 Tic Tac Toe
+  .board#game-board
+    each row, rowIndex in gameBoard
+      button.cell(data-row=rowIndex id=rowIndex, onclick=`makeMove(${rowIndex})`) 
+        span #{row}

@@ -1,0 +1,22 @@
+{
+	"name": "tic-tac-toe-game",
+	"version": "1.0.0",
+	"scripts": {
+		"mc:dev": "pnpm --filter=mc-tic-tac-toe dev",
+		"mc:build": "pnpm --filter=mc-tic-tac-toe build",
+		"worker:dev": "pnpm --filter=game-logic-worker dev",
+		"worker:deploy": "pnpm --filter=game-logic-worker deploy",
+		"typecheck": "pnpm --recursive --parallel typecheck",
+		"test": "pnpm --recursive --parallel test",
+		"eslint": "eslint --ext .ts,.js, .",
+		"eslint:fix": "eslint --ext .ts,.js, . --fix",
+		"format": "prettier --check .",
+		"format:fix": "prettier --write . "
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^7.0.2",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3"
+	}
+}
